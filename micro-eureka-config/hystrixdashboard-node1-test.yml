@@ -1,0 +1,18 @@
+server:
+ port: 3001
+spring:
+ application:
+  name: hystrix-dashboard
+eureka:
+ client:
+  service-url:
+   defalutZone: http://localhost:9001/eureka/
+feign:
+ hystrix:
+  enabled: true
+turbine:
+ appConfig: micro-user-server,micro-product-server
+ clusterNameExpression: new String("default")
+ aggregator:
+  clusterConfig: default
+ instanceUrlSuffix: hystrix.stream
