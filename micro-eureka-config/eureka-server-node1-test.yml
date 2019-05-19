@@ -4,3 +4,4 @@ jdbc:
   driver-class-name: com.mysql.jdbc.Driver
   password: root
   username: password
+username: test
